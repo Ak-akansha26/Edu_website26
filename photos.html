@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos</title>
+    <style>
+       body{
+         background: linear-gradient(to right, #8dbfde,#ffd8e9, #6e86df,#d783c1, #7b68cf);
+         
+       }
+       .container{
+         display: flex; flex-direction: row; flex-wrap: wrap;
+         justify-content: center;
+       }
+       @media(max-width : 750px){
+         .container{
+         display: flex; flex-direction: column; flex-wrap: wrap;
+       }
+       }
+        p{
+            color : rgb(26, 18, 18);
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+
+        }
+         .memories{background: linear-gradient(to right, #ffd8e9, #e097e9, #7e8dc3);
+            border: 2px solid silver;
+            color: black; text-align: center;
+              /* Clips the gradient to the text */
+       }
+       .card{
+        /* width: 450px;
+        height: 260px; */
+         width: 380px;
+        height: 240px;
+        display: inline-block;
+        margin: 15px;
+        border: 2px solid silver;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px black;
+        transition: 1s;
+       }
+       .card:hover{
+        box-shadow: 0 15px 80px black;
+         width: 480px;
+        height: 340px;
+       }
+       img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px 5px 0 0;
+       }
+       
+    </style>
+</head>
+<body>
+    <h1 class = "memories">Our memories with students ^_^</h1>
+    <div class="container">
+<div class="card">
+                <img src = "img1.jpg" height = "300" width = "300">
+</div>
+
+        <div class="card">
+              <img src = "img2.jpg" height = "300" width = "400">
+        </div>
+        
+          <div class="card">
+                <img src = "img6.jpg" height = "200" width = "200">
+          </div> 
+         
+          <div class="card">
+                <img src = "img8.jpg" height = "200" width = "200">
+          </div>
+          <div class="card">
+                <img src = "img3.jpg" height = "200" width = "200">
+          </div> 
+                    <div class="card">
+                <img src = "img9.jpg" height = "200" width = "200">
+          </div>  
+          <div class="card">
+                <img src = "img6.jpg" height = "200" width = "200">
+          </div>
+            <div class="card">
+                <img src = "img10.jpg" height = "200" width = "200">
+          </div> <div class="card">
+                <img src = "img5.jpg" height = "200" width = "200">
+          </div>
+          <div class="card">
+                <img src = "img7.jpg" height = "300" width = "500">
+            </div>
+           
+            <!-- <div class="card">
+                <img src = "" height = "200" width = "200">
+          </div>   -->
+          </div>
+</body>
+</html>
+

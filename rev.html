@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews</title>
+    <style>
+    body{
+        /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkRVewKpCohTvbOr_hTc7dqziMxtOUo-qjoGGqekYP8Q&s=10);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;  */
+        /* height: 100vh;  */
+        display: flex; justify-content: center;
+    }
+    form{
+        color: white;
+        font-size: large;
+    }
+    #container{
+        background-color: rgb(221, 232, 241);
+        margin-left : 20px; width: 850px;
+        padding: 10px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        display: flex; flex-direction: column;
+
+    }
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h1{
+        color: rgb(15, 15, 15);
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #ratingdiv{
+        background-color: rgba(136, 215, 187, 0.264);
+        display: flex; align-items: center;
+        margin: 10px; padding: 10px;
+        gap: 10px; border-radius: 15px;
+    }
+    #ratings{
+        font-size: 3em; font-weight: bold; color: rgb(39, 89, 225);
+
+    }
+    .stars{
+        color: rgb(228, 228, 29);
+        font-size: 1.5em;
+    }
+    .ratesum{
+        font-family:Arial, Helvetica, sans-serif;
+        font-size: 1em;
+    }
+    #fdbck{
+        margin-bottom: 10px;
+        margin-left: 10px;
+    }
+    .review-card{
+        margin-bottom: 10px; padding: 20px;
+    }
+    .reviewer-name{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px; font-weight: bold; font-style: oblique;
+    }
+    .review-form{
+border: 1px solid gray; margin-top: 20px; padding: 10px; border-radius: 5px; background-color: aliceblue; border: 1px solid silver;
+    }
+     .form-group { margin-bottom: 15px; }
+     .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color:black; }
+    .form-group input, .form-group select, .form-group textarea {
+        width: 95%; padding: 10px; border: 1px solid black; border-radius: 10px;
+    }
+    #btn{
+       align-content: center; margin: 10px; 
+         
+    }
+    button{
+         background-color: antiquewhite; font-size: 20px;padding: 8px 10px;
+         border-radius: 10px;  
+    }
+    @media(max-width : 750px){
+         #container{
+        width: 350px;
+        padding: 10px;
+        display: flex; flex-direction: column;
+        flex-wrap: wrap;
+    }
+    }
+</style>
+</head>
+<body>
+    
+
+    <div id = "container">
+         <h1>Student Reviews</h1>
+        <div id="ratingdiv">
+<div id="ratings">4.8</div>
+<div>
+<div class="stars">★★★★★</div>
+<div class="ratesum">Based on 100+ reviews</div>
+</div>
+        </div>
+        <h2 id="fdbck">Recent Feedback</h2>
+
+         <div class="review-card">
+        <div class="reviewer-name">Megha</div>
+        <div class="stars">★★★★☆</div>
+        <div class="review-text">
+            I really liked my experience here. Teachers teach very well with very good behavior. You must visit here</div>
+    </div><hr>
+
+    <div class="review-card">
+        <div class="reviewer-name">Abdul Altamash Malik</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-text">Sunrise computer center is the best coaching center in the Shahjahanpur..
+                               No other computer coaching like sunrise in the Shahjahanpur for me from now on.</div>
+    </div><hr>
+
+<div class="review-card">
+        <div class="reviewer-name">Nigam Sharma</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-text"> Currently I m studying Tally Prime accounting and I am full satisfied and highly recommended to everyone.
+                                  Fees vasool ho jati hai !!!</div>
+    </div><hr>
+
+    <div class="review-card">
+        <div class="reviewer-name">Ibra Noor</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-text">Excellent computer center with friendly staff and quality learning. 
+            Teachers are very helpful, and the learning environment is very good. Highly recommended for computer learning. You can enroll in different courses. ^_^
+Best computer institute! Fees bahot kam hai !
+❤️
+</div>
+    </div><hr>
+
+     <div class="review-card">
+        <div class="reviewer-name">Aniket</div>
+        <div class="stars">★★★★★</div>
+        <div class="review-text">Sunrise Computer Centre near Islamia Inter College is amazing! Teachers teach so well that everything is easily understood. 
+            This place is perfect for learning computers👈🥸....</div>
+    </div><hr>
+
+   
+    <div class="review-form">
+        <h2>Leave a Review</h2>
+    <form action="/server">
+        
+        <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type = "text" id="name" required placeholder="Kirti Singh">
+        </div>
+
+         <div class="form-group">
+                <label for="rating">Rating</label>
+                <select id="rating" name="rating" required>
+                    <option value="5">5 Stars - Excellent</option>
+                    <option value="4">4 Stars - Good</option>
+                    <option value="3">3 Stars - Average</option>
+                    <option value="2">2 Stars - Poor</option>
+                    <option value="1">1 Star - Terrible</option>
+                </select>
+            </div>
+            <div class="form-group">
+                 <label for="comments">Comments</label>
+                 <textarea id="comments" name="comments" rows="3" required placeholder="Share Your Experience.....^-^"></textarea>
+            </div>
+    </form>
+    </div>
+    <div id="btn">
+    <button>Submit Review</button></div>
+    </div>
+    
+ 
+<!--  where you want reviews to appear on your page
+<script src="https://elfsight.com" defer></script>
+<div class="elfsight-app-YOUR-WIDGET-ID-HERE"></div>
+-->
+    
+    
+</body>
+</html>

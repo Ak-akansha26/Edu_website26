@@ -1,0 +1,395 @@
+ body{
+       background-color: #ffffff;
+        height: 100vh; 
+    }
+
+ #logo img{display: flex;
+    margin-left: 20px; margin-top: 0px; padding: 10px;
+ } 
+
+
+ul{
+    list-style-type: none;
+    padding: 2px;               
+    gap: 8px;              
+}
+ul li{
+    display: block;
+    float: left;
+}
+
+ul li a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+    min-width: 100px;
+    margin: 6px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px;
+
+    padding: 10px 25px;
+    border-radius: 6px; cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+li a:hover, li a.active{
+    background-color: #ea8613;color: white;
+    transform: scale(1.05);
+}
+
+
+p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+}
+#uprdiv{
+    /* background-color: #640D5F; */
+    /* background-color: rgba(33, 33, 28, 0.958); */
+     background-color: #f4f4f4bd;
+    /* border: 2px solid gold; */
+     width: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+.sunrise-text{
+            font-family: 'Arial Black', sans-serif;
+            font-size: 5em;margin-top: -160px;margin-bottom: 0px;
+            text-align: right;
+            text-transform: uppercase;
+            /* letter-spacing: 2px; */
+             /* Sunrise color palette: Yellow to Orange to Pink/Red */
+            background: linear-gradient(to right, #f8b500,#f167a2, #fba100,#f167a2, #f15b50);
+              /* Clips the gradient to the text */
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;           
+}
+.sunrise-text::first-letter{
+    font-size: 120px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#sun{
+    color: black;text-align: center;
+    font-size: 25px; margin-top: 0px;
+}
+@media(max-width : 750px){
+.sunrise-text{
+            font-family: 'Arial Black', sans-serif;
+            font-size: 2em;
+            /* margin-top: -140px; */
+            text-align: center; margin-top: 10px;
+           }
+             .sunrise-text::first-letter{
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#sun{
+    color: black;text-align: center;
+    font-size: 15px; margin-top: 0px;
+}   
+        }
+           
+
+.para{
+    background-color: #f4f4f4bd;
+    padding: 12px;
+    display: flex;
+}
+
+h3{
+    color: #000000;
+}
+.teach{
+    color: #ffffff;
+    background-color: #ea8613;
+    /* border:2px solid #D91656; */
+    padding: 8px;
+}
+
+table , th ,td{
+padding: 10px;
+
+border-collapse: collapse;
+}
+
+th,td{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 450;
+    font-size: 18px;
+    color: #000000;
+    background-color: #f4f4f4bd;
+    text-align: center;
+}
+@media(max-width : 750px){
+  th,td{
+    font-size: 12px;
+    text-align: left;
+}
+}
+#table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+#table th{
+    text-align: left;
+    padding: 15px; background: #f1f5f9;
+}
+#table td{
+    background: white;
+    padding: 15px; border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+#table tr{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+#table td:first-child{
+    border-left: 4px solid #ea8613;
+    font-weight: bold; border-radius: 8px 0 0 8px;
+}
+#table td:last-child{
+    border-radius: 0 8px 8px 0;
+}
+
+
+
+a{
+    font-weight: 500;
+}
+
+/* Like cols="25%" */
+aside {
+width: 85%;       
+background-color: #f4f4f4bd;
+padding: 20px;
+margin: 10px;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: flex-start;
+/*position: fixed;*/
+}
+aside img{
+    margin: 10px;
+}
+main {
+width: 75%;      
+padding: 20px;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: flex-start;
+min-width: 25%;
+} 
+
+ /* Like cols="75%" */
+ header, footer {
+       background-color: #f4f4f4bd;
+       color: #000000;
+       padding: 15px;
+       text-align: center;
+       width: 100%;
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+       justify-content: center;
+       gap: 0px;
+     }
+     p{
+       color: #000000; 
+     }
+ 
+/* Resets default margins */
+        body { margin: 0; font-family: sans-serif; 
+        }
+    /* The CSS Animation Configuration */
+@keyframes marqueeRight {
+ 0% {
+    /* Starts shifted completely left out of view */
+    transform: translateX(-50%); 
+  }
+  100% {
+    /* Progresses completely to the right edge */
+    transform: translateX(100%); 
+  }
+}
+
+.ticket_wrapper{
+    overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  background: #ffffff;
+  padding: 10px 0;
+  /* new again */
+   margin-top: 0px; 
+    display: block; 
+    clear: both;
+}
+#moveRight{
+     display: inline-block;
+  white-space: nowrap;
+  animation: marqueeRight 39s linear infinite; 
+  /* added */
+  margin: 0;
+}
+#moveRight span{
+  /* Apply the animation shorthand */
+  /* Name | Duration | Timing | Fill Mode */
+  display: inline-block;
+  font-family: sans-serif;
+  color: #000000;
+  font-size: 1.5rem;
+}
+/* added */
+@media(max-width : 750px){
+   .ticket_wrapper{
+    margin-top: 0px;
+    }
+     #moveRight-span{
+        font-size: 1em;
+    }
+}
+
+
+
+/* Flexbox container to align Sidebar and Main side-by-side */
+.text-wrapper{
+    display: flex;
+     min-height: 80vh;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+@media(max-width : 750px){
+.text-wrapper{
+    display: flex;
+     min-height: 80vh;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+
+}
+}
+.left-column{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left-column img{
+    width: 100%;
+    height: 250px;
+    width: 300px;
+    min-width: 150px;
+    min-height: 200px;
+}
+
+.right-column{
+    flex: 2;
+    padding: 20px;
+    color: black;
+}
+
+ #transform{
+ text-align: center;
+ justify-self: center; margin-top: 30px; margin : 20px;
+ /* margin-left: 200px; margin-right: 800px; */
+ }
+ #inside{
+background-color: #f4f4f4bd;
+width: 300px; height: 250px;
+transform-origin: center;
+margin: 0px; align-content: center;
+
+padding: 40px; 
+text-align: center;
+font-weight:900;  letter-spacing: 2px;
+cursor: pointer; 
+transition: 0.3s;
+ }
+    #inside:hover{
+     transform: scale(1.05);
+     background: #ea8613;
+    }
+    .font{
+  font-family: "Faster One", system-ui;
+  font-weight: 400; font-size: 30px;
+  font-style: normal; color: black;
+  }
+  #overtransform{
+    display: flex;
+    flex-direction: row;
+  }
+@media(max-width:750px){
+   #overtransform{
+    display: flex;
+    flex-direction: column;
+  } 
+}
+
+/* additional */
+ .main-fixed-header {
+         /* position: sticky; */
+   
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adds depth above your background */
+    display: flex;
+    flex-direction: column;
+}
+ul li a{
+    display: block;
+    background-color: rgba(185, 197, 206, 0.453);
+    /* padding: 8px; */
+    padding: 8px 16px; /*new*/
+    text-decoration: none;
+    color: #000000;
+    /* width: 100px; */
+    margin: 6px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 16px;
+    /* new html */
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+@media(max-width : 750px){
+    ul{
+    padding: 1px;         /* display : flex; --Magically aligns items side-by-side */
+    gap: 3px;              /* Creates a clean space between the buttons */
+    /* added */
+    flex-direction: column;
+    /* html */
+     align-items: center;
+        gap: 8px;
+}
+    ul li a {
+        width: 150px; 
+    }
+ #uprdiv{
+         flex-direction: column;
+       }
+}
+
+.header-text-container {
+    text-align: center;
+}
+.myname{
+    background: #000000; color: #ffffff;
+    text-align: center; padding: 10px;
+    font-size: 16px; padding: 8px;
+}
+footer p{
+    margin: 25px;
+}
