@@ -13,15 +13,20 @@
             color: black; text-align: center;
         }
         #container{
+            display: grid;
             grid-template-columns: repeat(4,1fr);
             grid-template-rows: repeat(4,1fr); grid-gap: 8px;
             width: 80%;
             height: auto;
             background-color: white; 
-            margin-left: 30px;
-            margin-right: 30px; 
+            /* margin-left: 30px;
+            margin-right: 30px;  */
             /* align-items: center;justify-self: center; */
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-items: center;
               }
+
        
          @media(max-width : 750px){
             #container{
@@ -35,15 +40,13 @@
             height: 230px; background-color: aliceblue; margin: 0px;
             /* justify-self: center;  */
             font-family: 'Times New Roman', Times, serif;
-            display: grid;text-align: left;
-            
-            
+            cursor: pointer; transition: 0.3s;    
         }
-        #innerdiv{
+        .innerdiv{
              border: 1px solid black; border-radius: 8px;
              padding: 6px 14px 0 14px;
         }
-        #innerdiv:hover{
+        .innerdiv:hover{
             box-shadow: 0 15px 20px black;
              transition: 0.5s;
         }
@@ -61,6 +64,26 @@
         body{
             display: flex; flex-direction: column; align-items: center;
         }
+        
+        #popup{
+            display: none;
+            position: fixed; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-color: rgba(255, 255, 255, 0.571);
+            z-index: 1000;
+        }
+
+        #popup-box{
+            background: white;
+            width: 80%; max-width: 500px;
+            padding: 25px; border-radius: 15px;
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        #close{
+            float: right;
+            font-size: 35px; cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -71,29 +94,29 @@
 <br>
     </div>
     <div id="container">
-    <div id="innerdiv">
-       <h3 id="heading"> CCC</h3>
+    <div class="innerdiv">
+       <h3 class="heading"> CCC</h3>
        <p>This is a basic computer course of 3 months and there is no minimum qualification for this course.
         Student who cleared 12th can give consent themselves but below the 12th standard their parents have to
         give the consent.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-        <h3 id="heading">Tally Prime</h3>
+    <div class="innerdiv">
+        <h3 class="heading">Tally Prime</h3>
         <p>This is 3 months course related to accounts.We teach students both theory and practical.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-        <h3 id="heading">Tally ERP 9</h3>
+    <div class="innerdiv">
+        <h3 class="heading">Tally ERP 9</h3>
         <p>This is 3 months course related to accounts.We teach students both theory and practical.
             This the older version of Tally.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-        <h3 id="heading">'O' Level</h3>
+    <div class="innerdiv">
+        <h3 class="heading">'O' Level</h3>
         <p>This is 1 year computer courses basic to advance level.
             M1R5- IT tools
             M2R5- Web designing and publishing.
@@ -102,61 +125,85 @@
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-        <h3 id="heading">Basic Course for School Students</h3>
+    <div class="innerdiv">
+        <h3 class="heading">Basic Course for School Students</h3>
         <p>This is a basic computer course of 3 months and there is no minimum qualification for this course.
         School students can also join this course to expand their knowledge.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-        <h3 id="heading">ADCA</h3>
+    <div class="innerdiv">
+        <h3 class="heading">ADCA</h3>
         <p>This is a basic computer course of 12 months and the minimum qualification for this course is 10th.
             In this course you learn the things from scratch.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-      <h3 id="heading">MS Office</h3>
+    <div class="innerdiv">
+      <h3 class="heading">MS Office</h3>
       <p>This is a basic computer course of 3 months and there is no minimum qualification for this course.
         This is popular course among studets and working professionals too.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-       <h3 id="heading">Python Programming</h3>
+    <div class="innerdiv">
+       <h3 class="heading">Python Programming</h3>
        <p>We provides 3 months of course of Python from basic.If you are excited to learn more you can go for
         other languages too.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-        <h3 id="heading">Front-end-Development(Html,Css,JS)</h3>
+    <div class="innerdiv">
+        <h3 class="heading">Front-end-Development(Html,Css,JS)</h3>
         <p>This is the 6 months course. We teach Html,CSS,JS from the scratch.
             By this course you can create the webpages and websites of your choice.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-        <h3 id="heading">Hinid, English Typing(3 Months)</h3>
+    <div class="innerdiv">
+        <h3 class="heading">Hinid, English Typing(3 Months)</h3>
         <p>This course is of 3 months. You can do typing with Mangal Font and KrutiDevi Font.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-        <h3 id="heading">Java Programming</h3>
+    <div class="innerdiv">
+        <h3 class="heading">Java Programming</h3>
         <p>Java is a very popular programming language and it is used to develope apps.
         Join the course fastly.
        </p>
     </div>
-    <div id="innerdiv">
-        <h3 id="heading">C++ Programming</h3>
+    <div class="innerdiv">
+        <h3 class="heading">C++ Programming</h3>
         <p>C++ is challenging and interesting language at the same time. You can develope
             apps and games using c++.
         Join the course fastly.
        </p>
     </div>
     </div>
+
+    <div id="popup">
+        <div id="popup-box">
+        <span id="close">&times;</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-text"></p>
+        </div>
+    </div>
+    <script>
+        let allDivs = document.querySelectorAll(".innerdiv");
+        let popup = document.getElementById("popup");
+        let title = document.getElementById("popup-title");
+        let text = document.getElementById("popup-text");
+        
+        allDivs.forEach(el => {
+            el.addEventListener("click", () => {
+                title.innerText = el.querySelector("h3").innerText;
+                text.innerText = el.querySelector("p").innerText;
+                popup.style.display = "block";
+            });
+        });
+
+        document.getElementById("close").onclick = () => popup.style.display = "none";
+    </script>
     
 </body>
 </html>
